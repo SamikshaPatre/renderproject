@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'new.html' %}
+<div class="w3-row-padding">
+{% for i in mod %}
+<div class="w3-container">
+  <div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-yellow">
+      <h1>{{i.title}}</h1>
+    </header>
+    <p>
+
+    <div class="w3-third  w3-col s4">
+      <img src="{{i.img.url}}" class="w3-round w3-image" alt="Norway">
+      <p>{{i.description}}</p>
+    </div>
+
+    <footer class="w3-container w3-white">
+      <h5></h5>
+    </footer>
+  </div>
+</div>
+
+<p>
+{% endfor %}
+</div>
+{% endblock content %}
